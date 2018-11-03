@@ -1,0 +1,102 @@
+.image{
+  height: 70%;
+
+}
+.main-hello{
+    margin-top: 1.2rem;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Arvo', serif;
+    text-align: right;
+    font-size: 60px;
+    color: #E5173F
+}
+.main-hello-2{
+    margin-top: 1.2rem;
+    margin-left: 0px;
+    font-family: 'Arvo', serif;
+    font-size: 60px;
+
+
+}
+.row-pad{
+    margin-top: 10vh;
+    max-height: 350px;
+}
+.supporting-font{
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 30px;
+}
+.item-name{
+    font-weight: 600;
+}
+.button-row{
+
+}
+.button1{
+    background-color: #696158;
+}
+
+.button2{
+    margin-left: 10px;
+    background-color: #A4343A;
+}
+.button{
+    font-size: 30px;
+    padding-top: 10px;
+    width:25%;
+}
+
+
+.flex-container{
+    padding-right: 30px;
+}
+.btn-huge{
+    padding-top:10px;
+    padding-bottom:10px;
+    font-size:35px;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 8px;
+}
+.line-1{
+    position: relative;
+    top: 50%;
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) 5 normal;
+}
+.nice-border{
+    margin-top: 10px;
+   margin-bottom: 10px;
+   border-bottom: 5px dotted #A4343A;
+   border-spacing: 10px;
+   margin-right: 25px;
+}
+
+
+
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 20em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(0,0,0,.75);}
+  to{border-right-color: transparent;}
+}
+

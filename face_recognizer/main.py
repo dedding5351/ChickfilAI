@@ -87,6 +87,7 @@ def main(socketIO):
         ('Barack Obama', 'obama.jpg'),
         ('Joe Biden', 'biden.jpg'),
         ('Will', 'will.jpg'),
+        ('Boyd', 'boyd1.jpg'),
     ]
 
     known_face_names = [p[0] for p in known_faces]

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import socketio
 try:
     import eventlet
@@ -7,13 +6,12 @@ except ImportError:
     eventlet = None
 
 from flask import Flask, render_template
-=======
+
 import eventlet.wsgi
 import socketio
 from flask import Flask
 
 from user_data import customerArray
->>>>>>> 965256d5d7a268873bbc572bbe6b3127f2ce0de0
 
 sio = socketio.Server()
 app = Flask(__name__, static_url_path = '', static_folder = 'frontEnd', template_folder = 'frontEnd')
@@ -68,7 +66,6 @@ def disconnect(sid):
 
 
 if __name__ == '__main__':
-<<<<<<< HEAD
     if eventlet:
         # wrap Flask application with engineio's middleware
         app = socketio.Middleware(sio, app)
@@ -78,10 +75,4 @@ if __name__ == '__main__':
     else:
         app.run(debug=True)
 
-=======
-    # wrap Flask application with engineio's middleware
-    app = socketio.Middleware(sio, app)
 
-    # deploy as an eventlet WSGI server
-    eventlet.wsgi.server(eventlet.listen(('0.0.0.0', 80)), app)
->>>>>>> 965256d5d7a268873bbc572bbe6b3127f2ce0de0

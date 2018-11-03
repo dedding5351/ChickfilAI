@@ -6,8 +6,6 @@ from flask import Flask, render_template
 sio = socketio.Server()
 app = Flask(__name__)
 
-relayed_messages = ['user_detection']
-
 @app.route('/')
 def index():
     """Serve the client-side application."""
@@ -17,11 +15,10 @@ def index():
 def connect(sid, environ):
     print('Client {} connected'.format(sid))
 
-for message in relayed_messages:
-    @sio.on(message, namespace='/relay')
-    def message_func(sid, data):
-        print("Relaying from {}: {} -> {}".format(sid, message, str(data)[:100]))
-        sio.emit(message, data, skip_sid=sid)
+@sio.on('user_detection', namespace='/relay')
+def message_func(sid, data):
+    print("Relaying from {}: user_detection -> {}".format(sid, str(data)[:100]))
+    sio.emit('user_detection', data, skip_sid=sid)
 
 @sio.on('disconnect', namespace='/relay')
 def disconnect(sid):

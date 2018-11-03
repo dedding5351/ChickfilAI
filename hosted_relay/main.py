@@ -7,7 +7,6 @@ except ImportError:
 
 from flask import Flask, render_template
 
-import eventlet.wsgi
 import socketio
 from flask import Flask
 

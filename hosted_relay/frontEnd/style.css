@@ -48,7 +48,6 @@
     width:25%;
 }
 
-
 .flex-container{
     padding-right: 30px;
 }
@@ -89,6 +88,10 @@
    margin-right: 25px;
 }
 
+
+.shadow:hover {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.3) !important;
+}
 
 
 @keyframes typewriter{

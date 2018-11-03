@@ -100,6 +100,8 @@
                 app.message = data.name;
                 app1.url = data.url;
                 app1.itemname = data.last_order;
+                localStorage.setItem('itemname', data.last_order);
+                localStorage.setItem('price', data.order_price);
                 app1.itemdescription = data.description;
                 console.log(data);
                 hasLoaded = true;

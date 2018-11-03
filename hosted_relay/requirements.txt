@@ -1,0 +1,7 @@
+
+eventlet
+Flask
+python-socketio
+
+
+

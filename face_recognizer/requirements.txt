@@ -1,0 +1,5 @@
+
+face_recognition==1.2.3
+opencv-python==3.4.3.18
+socketIO-client-2
+

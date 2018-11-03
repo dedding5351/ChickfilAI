@@ -1,5 +1,5 @@
 .image{
-  height: 70%;
+  height: 90%;
 
 }
 .main-hello{
@@ -27,6 +27,10 @@
 .supporting-font{
     font-family: 'Libre Franklin', sans-serif;
     font-size: 30px;
+}
+.supporting-text{
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 25px;
 }
 .item-name{
     font-weight: 600;
@@ -88,8 +92,29 @@
    border-spacing: 10px;
    margin-right: 25px;
 }
-
-
+.first {
+  float:left;
+  margin-right:1em;
+  margin-left: 20em;
+}
+.price {
+  float:right;
+  margin-right: 20em;
+  margin-left:1em;
+}
+.list:after {
+  content:'';
+  border-bottom:dotted;
+  display:block;
+  overflow:hidden;
+  height:1em;
+}
+.divider{
+  border-bottom: solid black 5px;
+  padding-bottom: 300px;
+  width: 40%;
+  margin: 0 auto;
+}
 
 @keyframes typewriter{
   from{width: 0;}
@@ -99,4 +124,3 @@
   from{border-right-color: rgba(0,0,0,.75);}
   to{border-right-color: transparent;}
 }
-

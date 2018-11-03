@@ -31,7 +31,7 @@
                 <i class='price' >{{price}}</i>
             </p>
         <div class="divider"></div>
-
+        <p id='item1'>Total: {{price}}</p>
     </div>
     <hr>
     <p>delivering in 10 sec</p>
@@ -45,16 +45,18 @@
 <script type="text/javascript">
 
     document.getElementById("order").innerHTML = "order #" + Math.floor(Math.random() * 100);;
-    var app = new Vue({
-            el: '#welcome-message',
-            data: {
-            message: 'avi arora'
-            }
-        })
+
     var app = new Vue({
             el: '#item',
             data: {
             itemname: 'chicken sandwich',
+            price: '$3.65'
+
+            }
+        })
+    var app1 = new Vue({
+            el: '#item1',
+            data: {
             price: '$3.65'
 
             }

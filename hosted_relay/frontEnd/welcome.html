@@ -17,8 +17,9 @@
         <script src="socket.io.js"></script>
     </head>
 
-    <body>
+    <body style="background-color: #E5173F">
 
+        <h1 class="main-hello" style="color: white; text-align: center;">Chick-fil-Ai</h1>
 
 
 
@@ -31,22 +32,15 @@
 
     <script type="text/javascript">
 
-        var app = new Vue({
-            el: '#item',
-            data: {
-            itemname: itemname,
-            price: price
-
-            }
-        })
 
 
         var socket = io('http://54.161.203.83/');
 
         socket.on('user_detection', (data) => {
+            localStorage.setItem('data', data);
 
-            app.message = data.name;
             console.log(data);
+            location.href = '/landing';
 
         }
             )

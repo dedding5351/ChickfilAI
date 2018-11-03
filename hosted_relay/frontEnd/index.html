@@ -74,24 +74,25 @@
 
 
     <script type="text/javascript">
-
+        var data = localStorage.getItem('data')
 
         var app = new Vue({
             el: '#welcome-message',
             data: {
-            message: 'avi arora'
+            message: data.name;
             }
         })
 
         var app1 = new Vue({
             el: '#last-order',
             data: {
-            url: 'spicychicken.png',
-            itemname: 'spicy chicken sandwich',
-            itemdescription: 'a boneless breast of chicken seasoned with a spicy blend of peppers, hand-breaded, pressure cooked in 100% refined peanut oil and served on a toasted, buttered bun with dill pickle chips.'
+            url: data.url,
+            itemname: data.last_order,
+            itemdescription: data.description
             }
 
         })
+        /*
         var hasLoaded = false;
         var socket = io('http://54.161.203.83/');
 
@@ -108,10 +109,11 @@
             }
 
 
+
         }
             )
 
-
+        */
 
 
     </script>

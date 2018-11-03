@@ -55,23 +55,16 @@
 <script type="text/javascript">
 
     document.getElementById("order").innerHTML = "order #" + Math.floor(Math.random() * 100);;
-    var itemname = localStorage.getItem('itemname');
-    var price = localStorage.getItem('price')
+    var data = JSON.parse(localStorage.getItem('data'));
     var app = new Vue({
             el: '#item',
             data: {
-            itemname: itemname,
-            price: price
+            itemname: data.last_order,
+            price: data.order_price
 
             }
         })
-    var app1 = new Vue({
-            el: '#item1',
-            data: {
-            price: '$3.65'
 
-            }
-        })
     var timeleft = 10;
     var downloadTimer = setInterval(function(){
     timeleft--;

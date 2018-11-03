@@ -27,8 +27,8 @@
     <div style="min-height: 400px; margin-top: 20px;">
         <p style="text-align: center; font-weight: 600; font-size: 35px;" class="supporting-font" id="order">order # </p>
             <p class='list supporting-text' id='item'>
-                <i class='first' >chicken sandwich</i>
-                <i class='price' >$3.65</i>
+                <i class='first' >{{itemname}}</i>
+                <i class='price' >{{price}}</i>
             </p>
         <div class="divider"></div>
 
@@ -52,9 +52,11 @@
             }
         })
     var app = new Vue({
-            el: '#welcome-message',
+            el: '#item',
             data: {
-            message: 'avi arora'
+            itemname: 'chicken sandwich',
+            price: '$3.65'
+
             }
         })
     //var app = new Vue({

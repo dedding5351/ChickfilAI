@@ -40,7 +40,7 @@
 
                 <b-row id="last-order" class= 'row-pad'>
                     <b-col class='col-lg-4'>
-                        <img class='image rounded mx-auto d-block border img-roundedx' v-bind:src="url" />
+                        <img class='image rounded mx-auto d-block border' v-bind:src="url" />
                         <h2 style="text-align: center;" class="supporting-font">your last order</h2>
                     </b-col>
                     <b-col class='col-lg-8'>
@@ -92,13 +92,19 @@
             }
 
         })
-
+        var hasLoaded = false;
         var socket = io('http://54.161.203.83/');
 
         socket.on('user_detection', (data) => {
+            if (!hasLoaded && data.url) {
+                app.message = data.name;
+                app1.url = data.url;
+                app1.itemname = data.last_order;
+                app1.itemdescription = data.description;
+                console.log(data);
+                hasLoaded = true;
+            }
 
-            app.message = data.name;
-            console.log(data);
 
         }
             )

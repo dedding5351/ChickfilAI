@@ -37,7 +37,7 @@
         var socket = io('http://54.161.203.83/');
 
         socket.on('user_detection', (data) => {
-            localStorage.setItem('data', data);
+            localStorage.setItem('data', JSON.stringify(data));
 
             console.log(data);
             location.href = '/landing';

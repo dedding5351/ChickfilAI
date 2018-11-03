@@ -74,7 +74,7 @@
 
 
     <script type="text/javascript">
-        var data = localStorage.getItem('data')
+        var data = JSON.parse(localStorage.getItem('data'));
 
         var app = new Vue({
             el: '#welcome-message',

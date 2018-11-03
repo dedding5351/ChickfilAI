@@ -31,7 +31,14 @@
 
     <script type="text/javascript">
 
+        var app = new Vue({
+            el: '#item',
+            data: {
+            itemname: itemname,
+            price: price
 
+            }
+        })
 
 
         var socket = io('http://54.161.203.83/');

@@ -19,19 +19,18 @@ app = Flask(__name__, static_url_path = '', static_folder = 'frontEnd', template
 @app.route('/')
 def index():
     """Serve the client-side application."""
-    message = "Start application."
-    return render_template('welcome.html', message = message)
+    with open('frontEnd/welcome.html') as f:
+        return f.read()
 
 @app.route('/landing')
 def populateLandingPage():
-    message = "Generating Landing"
-    return render_template('index.html', message = message)
+    with open('frontEnd/index.html') as f:
+        return f.read()
 
 @app.route('/confirmation')
 def populateConfirmationPage():
-    message = "Generating Confirmation"
-    return render_template('confirmation.html', message = message)
-
+    with open('frontEnd/confirmation.html') as f:
+        return f.read()
 
 @sio.on('connect', namespace='/relay')
 def connect(sid, environ):

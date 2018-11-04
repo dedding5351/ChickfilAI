@@ -84,10 +84,11 @@ def camera_capture(frame_queue, frame_queue2):
 def main(socketIO):
 
     known_faces = [
-        ('Barack Obama', 'obama.jpg'),
-        ('Joe Biden', 'biden.jpg'),
+        # ('Barack Obama', 'obama.jpg'),
+        # ('Joe Biden', 'biden.jpg'),
         ('Will', 'will.jpg'),
         ('Boyd', 'boyd1.jpg'),
+        ('Huey', 'huey.jpg'),
     ]
 
     known_face_names = [p[0] for p in known_faces]
